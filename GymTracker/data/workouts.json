@@ -1,10 +1,12 @@
 [
     {
         "id": 1,
-        "date": "20-09-2026",
+        "date": "2026-09-20",
         "workout": "Back and Biceps",
-        "exercises": {
-            "lats-pulldown": [
+        "exercises": [
+            {
+                "name": "lats-pulldown",
+                "sets": [
                 {
                     "weight": 87,
                     "reps": 10
@@ -21,8 +23,11 @@
                     "weight": 60,
                     "reps": 7
                 }
-            ],
-            "single-hand Pulldown": [
+                ]
+            },
+            {
+                "name": "single-hand Pulldown",
+                "sets": [
                 {
                     "weight": 45,
                     "reps": 9
@@ -35,8 +40,11 @@
                     "weight": 30,
                     "reps": 12
                 }
-            ],
-            "peacher-curls": [
+                ]
+            },
+            {
+                "name": "peacher-curls",
+                "sets": [
                 {
                     "weight": 28,
                     "reps": 8
@@ -49,8 +57,11 @@
                     "weight": 20,
                     "reps": 6
                 }
-            ],
-            "hammer-curls": [
+                ]
+            },
+            {
+                "name": "hammer-curls",
+                "sets": [
                 {
                     "weight": 15,
                     "reps": 6
@@ -63,15 +74,18 @@
                     "weight": 10,
                     "reps": 5
                 }
-            ]
-        }
+                ]
+            }
+        ]
     },
     {
         "id": 2,
-        "date": "21-09-2026",
+        "date": "2026-09-21",
         "workout": "Chest and Triceps",
-        "exercises": {
-            "bench Press": [
+        "exercises": [
+            {
+                "name": "bench Press",
+                "sets": [
                 {
                     "weight": 80,
                     "reps": 8
@@ -84,8 +98,11 @@
                     "weight": 100,
                     "reps": 5
                 }
-            ],
-            "pec-Fly": [
+                ]
+            },
+            {
+                "name": "pec-Fly",
+                "sets": [
                 {
                     "weight": 30,
                     "reps": 12
@@ -98,8 +115,11 @@
                     "weight": 50,
                     "reps": 10
                 }
-            ],
-            "cable-Fly": [
+                ]
+            },
+            {
+                "name": "cable-Fly",
+                "sets": [
                 {
                     "weight": 20,
                     "reps": 10
@@ -112,8 +132,11 @@
                     "weight": 10,
                     "reps": 12
                 }
-            ],
-            "tricep-Pushdown": [
+                ]
+            },
+            {
+                "name": "tricep-Pushdown",
+                "sets": [
                 {
                     "weight": 50,
                     "reps": 6
@@ -126,15 +149,18 @@
                     "weight": 35,
                     "reps": 12
                 }
-            ]
-        }
+                ]
+            }
+        ]
     },
     {
         "id": 3,
-        "date": "22-09-2026",
+        "date": "2026-09-22",
         "workout": "Legs",
-        "exercises": {
-            "hack-Squat": [
+        "exercises": [
+            {
+                "name": "hack-Squat",
+                "sets": [
                 {
                     "weight": 80,
                     "reps": 15
@@ -147,8 +173,11 @@
                     "weight": 100,
                     "reps": 8
                 }
-            ],
-            "leg-Curl": [
+                ]
+            },
+            {
+                "name": "leg-Curl",
+                "sets": [
                 {
                     "weight": 40,
                     "reps": 15
@@ -161,8 +190,11 @@
                     "weight": 55,
                     "reps": 10
                 }
-            ],
-            "leg-Extension": [
+                ]
+            },
+            {
+                "name": "leg-Extension",
+                "sets": [
                 {
                     "weight": 60,
                     "reps": 12
@@ -175,8 +207,11 @@
                     "weight": 80,
                     "reps": 12
                 }
-            ],
-            "calf-raises": [
+                ]
+            },
+            {
+                "name": "calf-raises",
+                "sets": [
                 {
                     "weight": 20,
                     "reps": 12
@@ -189,7 +224,8 @@
                     "weight": 30,
                     "reps": 8
                 }
-            ]
-        }
+                ]
+            }
+        ]
     }
 ]
