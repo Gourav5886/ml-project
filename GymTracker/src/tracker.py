@@ -1,4 +1,5 @@
 from storage import load_workouts,save_workouts
+import json
 
 def get_next_id(workouts):
     largest_id = 0
@@ -35,5 +36,17 @@ def add_workout(workouts):
     return workouts
 
 current_workouts = load_workouts()
-current_workouts = add_workout(current_workouts)
-save_workouts(current_workouts)
+# current_workouts = add_workout(current_workouts)
+# save_workouts(current_workouts)
+
+def view_workouts(workouts):
+    for workout in workouts:
+        print("ID:",workout['id'])
+        print("Date:",workout['date'])
+        print("Workout:",workout['workout'])
+        for exercise in workout['exercises']:
+            print("Exercise:",exercise['name'])
+            for n,sets in enumerate(exercise['sets'],start=1):
+                print(f"Set {n}: {sets['weight']} kg x {sets['reps']}")
+        print()
+view_workouts(current_workouts)
