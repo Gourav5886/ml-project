@@ -14,3 +14,4 @@ def save_workouts(workouts):
     file_path = Path("GymTracker")/'data'/'workouts.json'
     content = json.dumps(workouts,indent=4)
     file_path.write_text(content)
+
