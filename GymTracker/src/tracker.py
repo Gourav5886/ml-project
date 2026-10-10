@@ -19,20 +19,42 @@ def add_workout(workouts):
         sets = []
         
         while True:
-            weight = int(input("enter weight: ")) 
-            reps = int(input("enter reps: ")) 
+            try:
+                weight = int(input("enter weight: ")) 
+                reps = int(input("enter reps: "))
+            except ValueError:
+                print("Invalid input. Enter numeric values.")
+                continue 
             sets.append({"weight":weight,'reps':reps})
-            add_more = input("add another set? (y/n)").lower()
-            if add_more !='y':
+            while True:
+                add_more = input("add another set? (y/n) ").lower()
+                if add_more =='y':
+                    break
+                elif add_more =="n":
+                    break
+                else:
+                    print("Invalid output")
+                    continue
+            if add_more=="n":
                 break
-        
+
         exercises.append({'name':exercise_name,'sets':sets})
-        add_exercise = input("add another exercise? (y/n)").lower()
-        if add_exercise != 'y':
+        while True:
+            add_exercise = input("add another exercise? (y/n) ").lower()
+            if add_exercise == 'y':
+                break
+            elif add_exercise =="n":
+                break
+            else:
+                print("Invalid input")
+                continue
+        if add_exercise =="n":
             break
+            
 
     new_workout = {'id':new_id,'date':date,'workout':workout,'exercises':exercises}
     workouts.append(new_workout)
+    save_workouts(workouts)
     return workouts
 
 
@@ -95,13 +117,17 @@ def update_workout(workouts):
                 print("Please press valid option")
                 continue
         print("Workout updated successfully.")
-        return workouts
+        save_workouts(workouts)
     else:
         print("No workout find check the details again")
-        return workouts
+    return workouts
 
 def delete_workout(workouts):
-    workout_id = int(input("Enter workout ID to delete: "))
+    try:
+        workout_id = int(input("Enter workout ID to delete: "))
+    except ValueError:
+        print('Invalid input. Please enter a numeric workout ID.')
+        return workouts
     workout = find_workout_by_id(workouts, workout_id)
     if workout is not None:
         print(workout["date"],workout["workout"])
@@ -110,11 +136,11 @@ def delete_workout(workouts):
             print("No changes")
         else:
             workouts.remove(workout)
+            save_workouts(workouts)
             print("Workout delete sucessfully")
     else:
         print("No workout find check the details again")
     return workouts
-
 # current_workouts = delete_workout(current_workouts)
 # save_workouts(current_workouts)
 
@@ -154,7 +180,7 @@ def show_statistics(workouts):
     print("Total exercises:", total_exercises(workouts))
     print("Total sets:", total_set(workouts))
 
-show_statistics(current_workouts)
+# show_statistics(current_workouts)
 
 def workout_type_counts(workouts):
     counts = {}
@@ -168,4 +194,9 @@ def workout_type_counts(workouts):
 
     return counts
 
-print(workout_type_counts(current_workouts))
+# print(workout_type_counts(current_workouts))
+
+# add_workout(current_workouts)
+# delete_workout(current_workouts)
+# update_workout(current_workouts)
+# view_workouts(current_workouts)
